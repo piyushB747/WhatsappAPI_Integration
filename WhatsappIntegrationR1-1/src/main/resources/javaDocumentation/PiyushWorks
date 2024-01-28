@@ -1,0 +1,184 @@
+#21 Oct work
+
+      <a href='<%=request.getContextPath() + "/WhatsappChatting.do?action=chattingScreen"%>' class="mb-1 dropdown-item">WhatsApp Chatting</a>
+
+        <!--WHATSAPP DEVELOPMENT-->
+       <action path="/WhatsappChatting" type="com.actions.WhatsappChattingAction" name="WhatsappChattingForm" scope="request">
+            <forward name="success" path="/jsp/WhatsappChatHomeScreen.jsp"/>
+            <forward name="failure" path="/Error.do" />
+       </action>
+
+
+
+       <form-bean name="WhatsappChattingForm" type="com.actionforms.WhatsappChattingActionForm"/>
+
+         <jsp:include page="whatsappchatroom.jsp"/>
+
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <title>WhatsApp Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f8fa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #container {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #header {
+            background-color: #128C7E;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        #contact-container {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-grow: 1;
+        }
+
+        #chat-list {
+            width: 30%;
+            background-color: #fff;
+            border-right: 1px solid #ccc;
+            overflow-y: auto;
+        }
+
+        #chat-list-item {
+            cursor: pointer;
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+            transition: background-color 0.2s;
+        }
+
+        #chat-list-item:hover {
+            background-color: #f7f7f7;
+        }
+
+        #chatscreencontainer{
+            flex: 1;
+            background-color: #f7f8fa;
+            padding: 20px;
+        }
+
+        #message-input {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            background-color: #f0f2f5;
+            border-radius: 8px;
+        }
+
+        #send-button {
+            background-color: #128C7E;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        #send-button:hover {
+            background-color: #0D6D5E;
+        }
+
+        #message-container {
+            margin-top: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"  class="maincontainer">
+        <div id="header">
+            WhatsApp Web
+        </div>
+        <div id="contact-container" class="contact_container">
+            <div id="chat-list" class="chatlistcontainer">
+                <div id="chat-list-item">Contact 1</div>    
+            </div>
+            <div id="chatscreencontainer">
+                <div id="message-container"  class="messageconainerclass">
+                </div>
+                <input type="text" id="message-input" placeholder="Type a message...">
+                <button id="send-button">Send</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+-------xxx-----
+
+
+####TODAY WORK 13 October 2023 ####
+Created Variable 
+
+
+##### Todays Work 9 October 2023 #####
+
+
+
+
+
+
+##### Todays Work 4 October 2023 #####
+
+@I have created Scheduled Service ScheduledServiceSendMessageToRm, in which I am sending RM Whatsapp Messages. 
+@In this I have used thread of 1 minute Sleep in the loop while iteration
+
+@Also Saved Whatsapp Wati Response in watiresponse_wr TABLE
+
+@Also  MainScheduledService also has Important code  like Date Comparison and Time Comparison
+
+111. Created Java CLASS and INTERFACE  111
+
+Interface ServiceRunScheduledService
+Class  ServiceImplRunScheduledService
+Class MainScheduledService   
+Class ScheduledServiceSendMessageToRm
+
+222. Created Packages  222
+  * net.intelliuno.scheduledservice 
+  Class MainScheduledService   
+  Class ScheduledServiceSendMessageToRm
+   
+333. MAIN WORK 333
+  
+  
+444 SCHEMAS CREATED 444   
+   
+   whatsappchatmaster_wac
+   rmescalatewhatsapp_rsw
+   servicerunner_sr
+   watiresponse_wr
+   whatsappchatlogmaster_wac
+   whatsapperror_we
+   whatsapptemplatemaster_wtm
+   whatsappchatlist_wcl
+
