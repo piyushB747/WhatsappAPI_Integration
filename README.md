@@ -15,8 +15,6 @@ Features
     Session Messages: Implements session messaging, enabling communication with users for 24 hours after receiving a reply.
 
     Database Integration: Uses MySQL as the backend database to store chat data, providing a reliable and scalable storage solution.
-
-    Security: Prioritizes security by securely storing credentials, using HTTPS for communication, and following encryption best practices.
 ![image](https://github.com/piyushB747/WhatsappAPI_Integration/assets/44388077/3e89e590-fc2c-4b06-96b1-62bce4665632)
 ![image](https://github.com/piyushB747/WhatsappAPI_Integration/assets/44388077/a559a006-3e82-4b6c-848a-f17b8ec95f07)
 
